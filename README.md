@@ -1,92 +1,90 @@
-# MyReads Project
+# MyReads: A Book Traking App
+## Project of UDACITY React Nanodegree Program
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+UDACITY React Nanodegree Program link:  https://www.udacity.com/course/react-nanodegree--nd019.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+This is a book tracking app allows you to select and categorize books you have read, are currently reading, or want to read. 
 
-## TL;DR
+## Installing
+1.1. Create Virtual Mashine
 
-To get started developing right away:
+1.2. Install nodejs, git and json-server
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+              sudo apt-get install curl
+              curl -sL https://deb.nodesourse.com/setup_8.x | sudo -E bash-
+              sudo apt-get install -y nodejs
+              sudo apt-get install -y build-essential
+              sudo apt-get install git
+              sudo npm install -global json-server
+              
+1.3. Clone information from this repositorie
 
-## What You're Getting
-```bash
-├── CONTRIBUTING.md
-├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
-├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
-├── public
-│   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
-└── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── icons # Helpful images for your app. Use at your discretion.
-    │   ├── add.svg
-    │   ├── arrow-back.svg
-    │   └── arrow-drop-down.svg
-    ├── index.css # Global styles. You probably won't need to change anything here.
-    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
-```
+             git clone https://github.com/Kuldyaev/ReactMyReads ['name new directorie']
+             
+1.4. Install packages
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
+            cd ['name new directorie']
+            npm install
+            
+1.5. From directory [name of project] we start json-server
 
-## Backend Server
+            $/[name of project]:  json-server --watch public/books.json
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+1.6. In the project directory, you can run:
 
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
+            $/[name of project]:  npm start
 
-### `getAll`
+1.7. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+May be you need check [http://localhost:3001](http://localhost:3001), because port 3000 used by json-server
+  
+ 
 
-Method Signature:
 
-```js
-getAll()
-```
+or
 
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
 
-### `update`
 
-Method Signature:
+2.1. Create Virtual Mashine with Ubuntu 16
 
-```js
-update(book, shelf)
-```
+2.2. Install packages for React
+    
+              sudo apt-get install curl
+              curl -sL https://deb.nodesourse.com/setup_8.x | sudo -E bash-
+              sudo apt-get install -y nodejs
+              sudo apt-get install -y build-essential
+              sudo apt-get install git
+              sudo npm install -g create-react-app
+              sudo npm install --save prop-types
+              sudo npm install --save escape-string-regexp sort-by
+              sudo npm install --save react-router-dom
+              sudo npm install -global json-server
+              
+2.3. Create new react app
+ 
+              npx create-react-app [name of project]
+              cd [name of project]
 
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
+2.4. Clone information from this repositorie
 
-### `search`
+             git clone https://github.com/Kuldyaev/ReactMyReads
 
-Method Signature:
+2.5. You need to copy PUBLIC abd SRC directory from cloning repositorie to your project [name of project]
 
-```js
-search(query)
-```
+2.6. From directory [name of project] we start json-server
 
-* query: `<String>`
-* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
+            $/[name of project]:  json-server --watch public/books.json
 
-## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
+2.7. In the project directory, you can run:
 
-## Create React App
+            $/[name of project]:  npm start
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+2.8. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+May be you need check [http://localhost:3001](http://localhost:3001), because port 3000 used by json-server
 
-## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+![demo](https://github.com/Kuldyaev/ReactMyReads/blob/master/src/icon/ft.JPG) 
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
