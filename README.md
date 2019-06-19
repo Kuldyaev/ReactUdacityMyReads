@@ -82,7 +82,7 @@ or
 May be you need check [http://localhost:3001](http://localhost:3001), because port 3000 used by json-server
 
 
-![demo](https://github.com/Kuldyaev/ReactMyReads/blob/master/src/icon/ft.JPG) 
+![demo](https://github.com/Kuldyaev/ReactUdacityMyReads/blob/master/public/primer.JPG) 
 
 
 
