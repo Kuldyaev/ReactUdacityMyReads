@@ -15,12 +15,21 @@ class AddBook extends Component {
   
     updateQuery = (query) => {
         this.setState(() => ({
-            query: query.trim()
+            query: query
         }))
         if (query){
         BooksAPI.search(query)
             .then((books) => {
-               if (books.length >0){this.setState({ sbooks: books })}
+               if (books.length >0){
+                   books.map((book)=>(
+                    (this.props.books.find(x => x.id !== book.id )&&( book.shelf = 'none'))
+                    &&
+                    (this.props.books.find(x => x.id === book.id )&&( 
+                     book.shelf = this.props.books.find(x => x.id === book.id ).shelf
+                    ))
+                    )
+                   )
+                   this.setState({ sbooks: books })}
                else {this.setState({ sbooks: [] })}
         })} else this.setState({ sbooks: [] })   
     }
